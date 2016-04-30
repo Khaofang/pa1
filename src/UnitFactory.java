@@ -42,6 +42,8 @@ public class UnitFactory {
 			return Weight.values(); 
 		else if(utype == UnitType.Volume)
 			return Volume.values();
+		else if(utype == UnitType.Time)
+			return Time.values();
 		throw new IllegalArgumentException("Invalid unit.");
 	}
 

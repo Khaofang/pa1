@@ -18,7 +18,7 @@ public class ConverterUI extends JFrame {
 	private JComboBox<Unit> unit1ComboBox, unit2ComboBox;
 	private JMenu menuUnitType;
 	private JMenuBar menuBar;
-	private JMenuItem menuLength, menuArea, menuWeight, menuVolume;
+	private JMenuItem menuLength, menuArea, menuWeight, menuVolume, menuTime;
 	private JLabel equalLabel;
 	private JPanel contents, changeModeContents;
 	private JRadioButton select1;
@@ -29,7 +29,7 @@ public class ConverterUI extends JFrame {
 	/** Constructor */
 	public ConverterUI(UnitConverter uc) {
 		this.unitconverter = uc;
-		this.setTitle("Length Converter");
+		this.setTitle("Unit Converter");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		initComponents();
 	}
@@ -55,11 +55,14 @@ public class ConverterUI extends JFrame {
 		menuWeight.addActionListener(new SwitchUnitTypeListener("Weight"));
 		menuVolume = new JMenuItem("Volume", KeyEvent.VK_N);
 		menuVolume.addActionListener(new SwitchUnitTypeListener("Volume"));
+		menuTime = new JMenuItem("Time", KeyEvent.VK_N);
+		menuTime.addActionListener(new SwitchUnitTypeListener("Time"));
 		menuBar.add(menuUnitType);
 		menuUnitType.add(menuLength);
 		menuUnitType.add(menuArea);
 		menuUnitType.add(menuWeight);
 		menuUnitType.add(menuVolume);
+		menuUnitType.add(menuTime);
 		menuUnitType.addSeparator();
 		menuUnitType.add(new ExitAction());
 		this.setJMenuBar(menuBar);

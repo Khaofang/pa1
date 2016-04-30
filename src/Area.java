@@ -30,14 +30,14 @@ public enum Area implements Unit {
 	}
 
 	/**
-	 * @return value of length
+	 * @return value of area
 	 */
 	public double getValue() {
 		return value;
 	}
 
 	/**
-	 * @return name of length
+	 * @return name of area
 	 */
 	public String toString() {
 		return String.format("%s", name);

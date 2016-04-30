@@ -1,4 +1,7 @@
-
+/**
+ * Collecting all of volume unit. Value is in form of cubic meter unit.
+ * @author Chayanin Punjakunaporn
+ */
 public enum Volume implements Unit {
 
 	/** Constant */
@@ -20,14 +23,14 @@ public enum Volume implements Unit {
 	}
 
 	/**
-	 * @return value of length
+	 * @return value of volume
 	 */
 	public double getValue() {
 		return value;
 	}
 
 	/**
-	 * @return name of length
+	 * @return name of volume
 	 */
 	public String toString() {
 		return String.format("%s", name);

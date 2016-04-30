@@ -8,7 +8,8 @@ public enum UnitType {
 	Length("Length"),
 	Area("Area"),
 	Weight("Weight"),
-	Volume("Volume");
+	Volume("Volume"),
+	Time("Time");
 	
 	/** Attribute */
 	private String type;

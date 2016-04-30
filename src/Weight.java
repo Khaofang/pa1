@@ -26,14 +26,14 @@ public enum Weight implements Unit {
 	}
 	
 	/**
-	 * @return value of length
+	 * @return value of weight
 	 */
 	public double getValue(){
 		return value;
 	}
 	
 	/**
-	 * @return name of length
+	 * @return name of weight
 	 */
 	public String toString(){
 		return String.format("%s", name);
