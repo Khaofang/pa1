@@ -1,7 +1,5 @@
 /**
- * Convert the first unit to the second by the converter. Use unit from Unit
- * interface.
- * 
+ * Convert the first unit to the second by the converter. Use unit from Unit interface.
  * @author Chayanin Punjakunaporn
  *
  */
@@ -9,7 +7,6 @@ public class UnitConverter {
 
 	/**
 	 * Convert this amount to new amount with new unit.
-	 * 
 	 * @param amount amount of formal unit
 	 * @param fromUnit formal unit
 	 * @param toUnit new unit for converter
@@ -21,7 +18,6 @@ public class UnitConverter {
 
 	/**
 	 * Get all of unit.
-	 * 
 	 * @return all of unit in arrays
 	 */
 	public Unit[] getUnits(UnitType utype) {

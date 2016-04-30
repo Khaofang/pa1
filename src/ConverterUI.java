@@ -9,7 +9,6 @@ import java.awt.event.KeyEvent;
  * second. Converting can convert from left to right and from right to left.
  * Show result of converting by clicking button "Convert!" and clear result by
  * clicking button "Clear".
- * 
  * @author Chayanin Punjakunaporn
  */
 public class ConverterUI extends JFrame {
@@ -19,7 +18,7 @@ public class ConverterUI extends JFrame {
 	private JComboBox<Unit> unit1ComboBox, unit2ComboBox;
 	private JMenu menuUnitType;
 	private JMenuBar menuBar;
-	private JMenuItem menuLength, menuArea, menuWeight;
+	private JMenuItem menuLength, menuArea, menuWeight, menuVolume;
 	private JLabel equalLabel;
 	private JPanel contents, changeModeContents;
 	private JRadioButton select1;
@@ -54,10 +53,14 @@ public class ConverterUI extends JFrame {
 		menuArea.addActionListener(new SwitchUnitTypeListener("Area"));
 		menuWeight = new JMenuItem("Weight", KeyEvent.VK_N);
 		menuWeight.addActionListener(new SwitchUnitTypeListener("Weight"));
+		menuVolume = new JMenuItem("Volume", KeyEvent.VK_N);
+		menuVolume.addActionListener(new SwitchUnitTypeListener("Volume"));
 		menuBar.add(menuUnitType);
 		menuUnitType.add(menuLength);
 		menuUnitType.add(menuArea);
 		menuUnitType.add(menuWeight);
+		menuUnitType.add(menuVolume);
+		menuUnitType.addSeparator();
 		menuUnitType.add(new ExitAction());
 		this.setJMenuBar(menuBar);
 		

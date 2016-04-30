@@ -1,8 +1,6 @@
 /**
  * Collecting all of length unit. Value is in form of meter unit.
- * 
  * @author Chayanin Punjakunaporn
- *
  */
 public enum Length implements Unit {
 
@@ -20,6 +18,7 @@ public enum Length implements Unit {
 	MICRON("Micron", 1.0e-6), 
 	WA("Wa", 2.0);
 
+	/** Attribute */
 	public final String name;
 	public final double value;
 

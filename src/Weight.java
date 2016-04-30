@@ -15,6 +15,7 @@ public enum Weight implements Unit {
 	POUND("Pound", 0.4536),
 	OUNCE("Ounce", 0.028349);
 	
+	/** Attribute */
 	public final String name;
 	public final double value;
 	

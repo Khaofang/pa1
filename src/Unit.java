@@ -10,6 +10,7 @@ public interface Unit {
 	 * @return value
 	 */
 	double getValue();
+	
 	/**
 	 * Get name of unit.
 	 * @return unit string

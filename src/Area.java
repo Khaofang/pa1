@@ -1,5 +1,5 @@
 /**
- * Collecting all of length unit. Value is in form of square meter unit.
+ * Collecting all of area unit. Value is in form of square meter unit.
  * 
  * @author Chayanin Punjakunaporn
  *
@@ -15,11 +15,11 @@ public enum Area implements Unit {
 	SQUARE_YARD("Sq. Yard", 0.8361),
 	SQUARE_FOOT("Sq. Foot", 0.0929),
 	SQUARE_INCH("Sq. Inch", 6.4516e-4),
-	HECTARE("Hectare", 10000),
-	
+	HECTARE("Hectare", 10000),	
 	SQUARE_WA("Sq. Wa", 4.0),
 	RAI("Rai", 1600);
 
+	/** Attribute */
 	public final String name;
 	public final double value;
 
