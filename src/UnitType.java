@@ -5,18 +5,20 @@
 public enum UnitType {
 	
 	/** Constant */
-	Length("Length"),
-	Area("Area"),
-	Weight("Weight"),
-	Volume("Volume"),
-	Time("Time");
+	LENGTH("Length", Length.values()),
+	AREA("Area", Area.values()),
+	WEIGHT("Weight", Weight.values()),
+	VOLUME("Volume", Volume.values()),
+	TIME("Time", Time.values());
 	
 	/** Attribute */
 	private String type;
+	private Unit[] unit;
 	
 	/** Constructor */
-	UnitType(String type) {
+	UnitType(String type, Unit[] unit) {
 		this.type = type;
+		this.unit = unit;
 	}
 	
 	/**
@@ -25,5 +27,9 @@ public enum UnitType {
 	 */
 	public String getType() {
 		return type;
+	}
+	
+	public Unit[] getUnits() {
+		return unit;
 	}
 }

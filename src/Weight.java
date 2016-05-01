@@ -13,7 +13,8 @@ public enum Weight implements Unit {
 	MICROGRAM("Microgram", 1.0e-9),
 	TONNE("Tonne", 1000),
 	POUND("Pound", 0.4536),
-	OUNCE("Ounce", 0.028349);
+	OUNCE("Ounce", 0.028349),
+	KEED("Keed", 0.1);
 	
 	/** Attribute */
 	public final String name;

@@ -34,17 +34,7 @@ public class UnitFactory {
 	 * @return all units of type of utype
 	 */
 	public Unit[] getUnits(UnitType utype) {
-		if(utype == UnitType.Length)
-			return Length.values();
-		else if(utype == UnitType.Area)
-			return Area.values();
-		else if(utype == UnitType.Weight)
-			return Weight.values(); 
-		else if(utype == UnitType.Volume)
-			return Volume.values();
-		else if(utype == UnitType.Time)
-			return Time.values();
-		throw new IllegalArgumentException("Invalid unit.");
+		return utype.getUnits();
 	}
 
 }

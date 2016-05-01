@@ -72,9 +72,9 @@ public class ConverterUI extends JFrame {
 		/** Create all components */
 		convertButton = new JButton("Convert!");
 		clearButton = new JButton("Clear");
-		unit1ComboBox = new JComboBox<Unit>(unitconverter.getUnits(UnitType.Length));
+		unit1ComboBox = new JComboBox<Unit>(unitconverter.getUnits(UnitType.LENGTH));
 		unit1ComboBox.setPreferredSize(new Dimension(125,25));
-		unit2ComboBox = new JComboBox<Unit>(unitconverter.getUnits(UnitType.Length));
+		unit2ComboBox = new JComboBox<Unit>(unitconverter.getUnits(UnitType.LENGTH));
 		unit2ComboBox.setPreferredSize(new Dimension(125,25));
 		equalLabel = new JLabel("=");
 		inputField1 = new JTextField("", 10);

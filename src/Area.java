@@ -7,17 +7,18 @@
 public enum Area implements Unit {
 
 	/** Constant */
-	SQUARE_METER("Sq. Meter", 1.0), 
-	SQUARE_KILOMETER("Sq. Kilometer", 1.0e+6), 
-	SQUARE_CENTIMETER("Sq. Centimeter", 0.0001), 
-	SQUARE_MILLIMETER("Sq. Millimeter", 1.0e-6),
-	SQUARE_MILE("Sq. Mile", 2.59e+6),
-	SQUARE_YARD("Sq. Yard", 0.8361),
-	SQUARE_FOOT("Sq. Foot", 0.0929),
-	SQUARE_INCH("Sq. Inch", 6.4516e-4),
+	SQUARE_METER("Square Meter", 1.0), 
+	SQUARE_KILOMETER("Square Kilometer", 1.0e+6), 
+	SQUARE_CENTIMETER("Square Centimeter", 0.0001), 
+	SQUARE_MILLIMETER("Square Millimeter", 1.0e-6),
+	SQUARE_MILE("Square Mile", 2.59e+6),
+	SQUARE_YARD("Square Yard", 0.8361),
+	SQUARE_FOOT("Square Foot", 0.0929),
+	SQUARE_INCH("Square Inch", 6.4516e-4),
 	HECTARE("Hectare", 10000),	
-	SQUARE_WA("Sq. Wa", 4.0),
-	RAI("Rai", 1600);
+	SQUARE_WA("Square Wa", 4.0),
+	NGAN("Ngan", 400.0),
+	RAI("Rai", 1600.0);
 
 	/** Attribute */
 	public final String name;
