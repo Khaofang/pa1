@@ -132,7 +132,6 @@ public class ConverterUI extends JFrame {
 				s = inputField2.getText().trim();
 			else
 				s = inputField1.getText().trim();
-			System.out.println("actionPerformed: input=" + s);
 			if (s.length() > 0) {
 				try {
 					double value = 0;
