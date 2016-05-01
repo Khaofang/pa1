@@ -149,9 +149,9 @@ public class ConverterUI extends JFrame {
 						inputField2.setText(String.format("%.2f", result));
 					}
 				} catch (Exception e) {
-					JOptionPane.showMessageDialog(null, "Invalid number!!", "Warning!", JOptionPane.PLAIN_MESSAGE);
 					inputField1.setForeground(Color.RED);
 					inputField2.setForeground(Color.RED);
+					JOptionPane.showMessageDialog(null, "Invalid number!!", "Warning!", JOptionPane.PLAIN_MESSAGE);
 				}
 			} else
 				JOptionPane.showMessageDialog(null, "Please input a number!", "Warning!", JOptionPane.PLAIN_MESSAGE);
