@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
 
 /**
@@ -76,7 +78,9 @@ public class ConverterUI extends JFrame {
 		unit2ComboBox.setPreferredSize(new Dimension(125,25));
 		equalLabel = new JLabel("=");
 		inputField1 = new JTextField("", 10);
+		inputField1.addFocusListener(new TextFieldInputListener());
 		inputField2 = new JTextField("", 10);
+		inputField2.addFocusListener(new TextFieldInputListener());
 		inputField2.setEditable(false);
 		modeSelection = new ButtonGroup();
 		select1 = new JRadioButton("Left->Right");
@@ -110,6 +114,15 @@ public class ConverterUI extends JFrame {
 	public void run() {
 		this.setVisible(true);
 	}
+	
+	public boolean canParseDouble(String str) {
+		try {
+			double num = Double.parseDouble(str);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
 
 	/** ActionListener of convertButton */
 	class ConvertButtonListener implements ActionListener {
@@ -135,6 +148,11 @@ public class ConverterUI extends JFrame {
 					}
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, "Invalid number!!", "Warning!", JOptionPane.PLAIN_MESSAGE);
+					if (select2.isSelected()) {
+						inputField2.setForeground(Color.RED);
+					} else {
+						inputField1.setForeground(Color.RED);
+					}
 				}
 			} else
 				JOptionPane.showMessageDialog(null, "Please input a number!", "Warning!", JOptionPane.PLAIN_MESSAGE);
@@ -162,6 +180,7 @@ public class ConverterUI extends JFrame {
 		}
 	}
 
+	/** ActionListner of switching unit type by menu */
 	class SwitchUnitTypeListener implements ActionListener {
 		UnitType utype;
 		
@@ -190,6 +209,20 @@ public class ConverterUI extends JFrame {
 		}
 	}
 	
+	/** FocusListener for focus input of JTextField */
+	class TextFieldInputListener implements FocusListener {
+	    public void focusGained(FocusEvent fe) {
+	    	inputField1.setForeground(Color.BLACK);
+	    	inputField2.setForeground(Color.BLACK);
+	    }
+
+	    public void focusLost(FocusEvent fe) {
+	    	inputField1.setForeground(Color.BLACK);
+	    	inputField2.setForeground(Color.BLACK);
+	    }
+	}
+	
+	/** AbstractAction for make GUI stops working and close by select Exit in menu Unit Type */
 	class ExitAction extends AbstractAction {
 		public ExitAction() {
 			super("Exit");
