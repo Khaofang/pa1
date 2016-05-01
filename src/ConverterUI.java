@@ -135,24 +135,24 @@ public class ConverterUI extends JFrame {
 			System.out.println("actionPerformed: input=" + s);
 			if (s.length() > 0) {
 				try {
-					double value = Double.valueOf(s);
-
+					double value = 0;
 					if (select2.isSelected()) {
+						inputField1.setText("");
+						value = Double.valueOf(s);
 						double result = unitconverter.convert(value, (Unit) unit2ComboBox.getSelectedItem(),
 								(Unit) unit1ComboBox.getSelectedItem());
 						inputField1.setText(String.format("%.2f", result));
 					} else {
+						inputField2.setText("");
+						value = Double.valueOf(s);
 						double result = unitconverter.convert(value, (Unit) unit1ComboBox.getSelectedItem(),
 								(Unit) unit2ComboBox.getSelectedItem());
 						inputField2.setText(String.format("%.2f", result));
 					}
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, "Invalid number!!", "Warning!", JOptionPane.PLAIN_MESSAGE);
-					if (select2.isSelected()) {
-						inputField2.setForeground(Color.RED);
-					} else {
-						inputField1.setForeground(Color.RED);
-					}
+					inputField1.setForeground(Color.RED);
+					inputField2.setForeground(Color.RED);
 				}
 			} else
 				JOptionPane.showMessageDialog(null, "Please input a number!", "Warning!", JOptionPane.PLAIN_MESSAGE);
