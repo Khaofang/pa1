@@ -31,6 +31,7 @@ public enum Area implements Unit {
 	}
 
 	/**
+	 * Get value of unit.
 	 * @return value of area
 	 */
 	public double getValue() {
@@ -38,6 +39,7 @@ public enum Area implements Unit {
 	}
 
 	/**
+	 * Get string of unit.
 	 * @return name of area
 	 */
 	public String toString() {

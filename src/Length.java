@@ -29,6 +29,7 @@ public enum Length implements Unit {
 	}
 
 	/**
+	 * Get value of unit.
 	 * @return value of length
 	 */
 	public double getValue() {
@@ -36,6 +37,7 @@ public enum Length implements Unit {
 	}
 
 	/**
+	 * Get string of unit.
 	 * @return name of length
 	 */
 	public String toString() {

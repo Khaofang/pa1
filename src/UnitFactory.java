@@ -10,7 +10,8 @@ public class UnitFactory {
 	public UnitFactory() {
 	}
 
-	/** Get single UnitFactory object.
+	/** 
+	 * Get single UnitFactory object.
 	 * @return instance single object of UnitFactory
 	 */
 	public static UnitFactory getInstance() {

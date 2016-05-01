@@ -115,7 +115,11 @@ public class ConverterUI extends JFrame {
 		this.setVisible(true);
 	}
 
-	/** ActionListener of convertButton */
+	/** 
+	 * ActionListener of convertButton
+	 * Use for convert units. 
+	 * @author Chayanin Punjakunaporn
+	 * */
 	class ConvertButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent evt) {
 			String s = "";
@@ -149,7 +153,11 @@ public class ConverterUI extends JFrame {
 		}
 	}
 
-	/** ActionListener of clearButton */
+	/** 
+	 * ActionListener of clearButton
+	 * Use for clear text fields.
+	 * @author Chayanin Punjakunaporn
+	 */
 	class ClearButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent evt) {
 			inputField1.setText("");
@@ -157,7 +165,11 @@ public class ConverterUI extends JFrame {
 		}
 	}
 
-	/** ActionListener of select1 and select2 JRadioButton */
+	/** 
+	 * ActionListener of select1 and select2 JRadioButton 
+	 * Use for set editable to text fields when selected way to convert.
+	 * @author Chayanin Punjakunaporn
+	 * */
 	class SelectedRadioButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent evt) {
 			if (select2.isSelected()) {
@@ -170,10 +182,15 @@ public class ConverterUI extends JFrame {
 		}
 	}
 
-	/** ActionListner of switching unit type by menu */
+	/** ActionListner of switching unit type by menu
+	 * Use for switching type of unit for converting.
+	 * @author Chayanin Punjakunaporn
+	 */
 	class SwitchUnitTypeListener implements ActionListener {
+		/** Attribute */
 		UnitType utype;
 		
+		/** Constructor */
 		public SwitchUnitTypeListener(String type) {
 			UnitType[] allUnitType = UnitFactory.getInstance().getUnitTypes();
 			for(UnitType thisUnitType : allUnitType) {
@@ -199,7 +216,11 @@ public class ConverterUI extends JFrame {
 		}
 	}
 	
-	/** FocusListener for focus input of JTextField */
+	/** 
+	 * FocusListener for focus input of JTextField 
+	 * Use for focus text fields that are editing.
+	 * @author Chayanin Punjakunaporn
+	 * */
 	class TextFieldInputListener implements FocusListener {
 	    public void focusGained(FocusEvent fe) {
 	    	inputField1.setForeground(Color.BLACK);
@@ -212,11 +233,17 @@ public class ConverterUI extends JFrame {
 	    }
 	}
 	
-	/** AbstractAction for make GUI stops working and close by select Exit in menu Unit Type */
+	/** 
+	 * AbstractAction for make GUI stops working and close by select Exit in menu Unit Type 
+	 * Use to exit the program.
+	 * @author Chayanin Punjakunaporn
+	 * */
 	class ExitAction extends AbstractAction {
+		/** Constructor */
 		public ExitAction() {
 			super("Exit");
 		}
+		
 		public void actionPerformed(ActionEvent evt) {
 			System.exit(0);
 		}

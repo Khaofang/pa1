@@ -28,6 +28,7 @@ public enum Time implements Unit {
 	}
 
 	/**
+	 * Get value of unit.
 	 * @return value of time
 	 */
 	public double getValue() {
@@ -35,6 +36,7 @@ public enum Time implements Unit {
 	}
 
 	/**
+	 * Get string of unit.
 	 * @return name of time
 	 */
 	public String toString() {

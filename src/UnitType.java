@@ -29,6 +29,10 @@ public enum UnitType {
 		return type;
 	}
 	
+	/**
+	 * Get all of unit in that type.
+	 * @return units in arrays.
+	 */
 	public Unit[] getUnits() {
 		return unit;
 	}

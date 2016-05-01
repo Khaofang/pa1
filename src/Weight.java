@@ -27,6 +27,7 @@ public enum Weight implements Unit {
 	}
 	
 	/**
+	 * Get value of unit.
 	 * @return value of weight
 	 */
 	public double getValue(){
@@ -34,6 +35,7 @@ public enum Weight implements Unit {
 	}
 	
 	/**
+	 * Get string of unit.
 	 * @return name of weight
 	 */
 	public String toString(){

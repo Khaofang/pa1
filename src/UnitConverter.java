@@ -1,7 +1,6 @@
 /**
  * Convert the first unit to the second by the converter. Use unit from Unit interface.
  * @author Chayanin Punjakunaporn
- *
  */
 public class UnitConverter {
 
@@ -24,6 +23,10 @@ public class UnitConverter {
 		return UnitFactory.getInstance().getUnits(utype);
 	}
 
+	/**
+	 * Get all unit types.
+	 * @return all unit types in arrays
+	 */
 	public UnitType[] getUnitTypes() {
 		return UnitFactory.getInstance().getUnitTypes();
 	}

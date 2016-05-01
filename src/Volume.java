@@ -23,6 +23,7 @@ public enum Volume implements Unit {
 	}
 
 	/**
+	 * Get value of unit.
 	 * @return value of volume
 	 */
 	public double getValue() {
@@ -30,6 +31,7 @@ public enum Volume implements Unit {
 	}
 
 	/**
+	 * Get string of unit.
 	 * @return name of volume
 	 */
 	public String toString() {
