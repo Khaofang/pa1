@@ -114,15 +114,6 @@ public class ConverterUI extends JFrame {
 	public void run() {
 		this.setVisible(true);
 	}
-	
-	public boolean canParseDouble(String str) {
-		try {
-			double num = Double.parseDouble(str);
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-	}
 
 	/** ActionListener of convertButton */
 	class ConvertButtonListener implements ActionListener {
