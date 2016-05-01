@@ -81,7 +81,6 @@ public class ConverterUI extends JFrame {
 		inputField1.addFocusListener(new TextFieldInputListener());
 		inputField2 = new JTextField("", 10);
 		inputField2.addFocusListener(new TextFieldInputListener());
-		inputField2.setEditable(false);
 		modeSelection = new ButtonGroup();
 		select1 = new JRadioButton("Left->Right");
 		select2 = new JRadioButton("Right->Left");
@@ -122,15 +121,30 @@ public class ConverterUI extends JFrame {
 	 * */
 	class ConvertButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent evt) {
+			String wayTo = "";
 			String s = "";
-			if (select2.isSelected())
+			if (select2.isSelected()) {
 				s = inputField2.getText().trim();
-			else
+				wayTo = "Left";
+			} else if (select1.isSelected()) {
 				s = inputField1.getText().trim();
+				wayTo = "Right";
+			}
+			else {
+				if(inputField1.getText().length() >= inputField2.getText().length()) {
+					s = inputField1.getText().trim();
+					wayTo = "Right";
+				}
+				else {
+					s = inputField2.getText().trim();
+					wayTo = "Left";
+				}
+					
+			}
 			if (s.length() > 0) {
 				try {
 					double value = 0;
-					if (select2.isSelected()) {
+					if (wayTo.equals("Left")) {
 						inputField1.setText("");
 						value = Double.valueOf(s);
 						double result = unitconverter.convert(value, (Unit) unit2ComboBox.getSelectedItem(),
